@@ -1,4 +1,4 @@
-node('master') {
+node('dockerasri') {
           checkout scm
           stage('build') {
               withMaven(jdk: 'Default Java', maven: 'Default Maven') {
