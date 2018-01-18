@@ -1,4 +1,4 @@
-node('docker') {
+node('dockernya asri') {
           checkout scm
           stage('build') {
               withMaven(jdk: 'Default Java', maven: 'Default Maven') {
