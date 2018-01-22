@@ -2,8 +2,17 @@ pipeline {
   agent any
   stages {
     stage('build') {
-      steps {
-        sh 'mvn clean install'
+      parallel {
+        stage('build') {
+          steps {
+            sh 'mvn clean install'
+          }
+        }
+        stage('ssh copy') {
+          steps {
+            sh 'mvn clean'
+          }
+        }
       }
     }
   }
