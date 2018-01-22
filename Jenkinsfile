@@ -1,4 +1,4 @@
-node('slave1') {
+node('any') {
           checkout scm
           stage('build') {
               withMaven(jdk: 'Default Java', maven: 'Default Maven') {
